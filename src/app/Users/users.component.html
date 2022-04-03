@@ -1,0 +1,47 @@
+<!--div >
+  <h1> Angular 1 is true now</h1>
+</div>
+
+
+<ng-template #View>
+   <h2>now  Angular 2 is visible because angular 1 is false</h2>
+</ng-template>
+
+<button class = "bg-light"  >Click to Hide</button>
+
+
+
+<div [ngSwitch]= "color">
+    <h1 style="color:red" *ngSwitchCase= "'red'">
+    <h1>red color</h1>
+</h1>
+<h1 style="color:rgb(223, 247, 14)" *ngSwitchCase= "'yellow'">
+  <h1>yellow color</h1>
+</h1>
+<h1 style="color:rgb(86, 223, 31)" *ngSwitchCase= "'green'">
+  <h1>green color</h1>
+</h1>
+<button > green color </button>
+<button > red color </button>
+<button > yellow color </button>
+
+
+</div>-->
+
+<table class =" table table-hover table-dark">
+  <tr [style.color]="'white'" class = bg-success>
+    <th>ID</th>
+    <th>name</th>
+    <th>Username</th>
+    <th>Email</th>
+  </tr>
+  
+  <tr *ngFor= "let i of student">
+    <td><a [routerLink] = "['/users',i.id]">{{i.id}}</a></td>
+  <td>{{i.name}}</td>
+  <td>{{i.username}}</td>
+  <td>{{i.email}}</td>
+   
+  </tr>
+</table>
+

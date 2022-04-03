@@ -1,0 +1,61 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "signup": [
+    {
+      "firstName": "prem",
+      "lastName": "kumar",
+      "email": "prem@gmail.Com",
+      "mobile": 9,
+      "PassWord": "zxcvb",
+      "id": 1
+    },
+    {
+      "firstName": "A",
+      "lastName": "K",
+      "email": "AK@gmail.com",
+      "mobile": 1,
+      "PassWord": "1234",
+      "id": 2
+    },
+    {
+      "firstName": "prem",
+      "lastName": "kumar",
+      "email": "p@gmail.com",
+      "mobile": 1,
+      "PassWord": "1234567",
+      "id": 3
+    },
+    {
+      "firstName": "k",
+      "lastName": "K",
+      "email": "kk@gmail.com",
+      "mobile": 3,
+      "PassWord": "12345",
+      "id": 4
+    },
+    {
+      "firstName": "prem",
+      "lastName": "Kumar",
+      "email": "Kumar@gmail.com",
+      "mobile": 2,
+      "PassWord": "prem",
+      "id": 5
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

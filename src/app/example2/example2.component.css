@@ -1,0 +1,19 @@
+.tool{
+  background-color: rgb(132, 153, 161);
+  color: white;
+}
+.example-container {
+  width: 100%;
+  height: 100%;
+  border: 2.5px solid #555;
+  background-color: whitesmoke;
+
+}
+.sidenav{
+  width: 20%;
+  background-color: whitesmoke;
+  border: 2.5px solid grey;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}

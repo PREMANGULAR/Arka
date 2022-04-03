@@ -1,0 +1,157 @@
+
+code to show INPUt data DETAILS beloe
+<mat-card>
+<input type="text" [(ngModel)]= "ShowSet">
+<br>
+<br>
+<table class="table">
+     <tr *ngFor= "let item of SampleData;">
+      <table *ngIf="ShowSet == item.name" >
+            <td >{{item.name}}</td>
+            <td >{{item.city}}</td>
+            <td >{{item.Number}}</td>
+            <td >{{item.Bike}}</td> 
+      </table>         
+    </tr>
+</table>
+</mat-card>
+
+<h1>Code to show Template-Driven form details in CONSOLe</h1>
+<mat-card>
+<form #myTdform="ngForm">
+  <input type ="text" class="form-control"  #firstname="ngModel" name="firstname" required lastName ngModel>
+  <span *ngIf="firstname.touched && firstname.valid" class="error"></span>
+  <input type="text" class="form-control"  #lastname="ngModel" name="lastname" minlength="4" maxlength="8" required lastname ngModel>
+  <span *ngIf="lastname.touched && lastname.valid" class="error"></span>
+
+<button type="submit" [disabled]="myTdform.invalid" (click)= "submit(myTdform.value)" >submit</button>
+</form>
+</mat-card>
+
+<h1>Code to show Reactive-form details in CONSOLe</h1>
+<mat-card> 
+    <form [formGroup]="userForm">
+      <input type="email" class="form-control" placeholder="email" formControlName="email">
+      <span *ngIf="email?.touched && email?.invalid" class= "error">email.required</span>
+
+      <input type="password" class="form-control" placeholder="password" formControlName="password">
+      <span *ngIf="password?.touched && password?.invalid" class= "error">password.required</span>
+      <button type="submit" (click)="get(userForm.value)">Submit</button>
+    </form>
+</mat-card>
+
+Code to display input data in console
+<mat-card>
+<label>input data can shown in console </label>
+<br>
+<input type="text" #name placeholder="UserName" ngModel >
+<br>
+<button type="submit" (click)="Submit(name.value)">Submit</button>
+<br>
+</mat-card>
+
+-Interpolation code
+<mat-card>
+<h4>{{interpolation}}</h4>
+<br>
+</mat-card>
+
+-Propetry binding sample code
+<mat-card>
+<button [disabled]= "property" >Property binding </button>
+<button [ngClass]= "property?'cog':'item'" >Property binding </button>
+<button (click)="Abc()">change color</button>
+</mat-card>
+
+-Event binding sample code
+<mat-card>
+<button (click)="Abc()">Event binding</button>
+</mat-card>
+
+
+<p>{{todayDate | date:'d-MM-yyyy'}}</p>
+<p>{{todayDate | date:'shortTime'}}</p>
+<p>{{todayDate | date:'short'}}</p>
+<p>{{todayDate | date:'medium'}}</p>
+<p>{{todayDate | date:'EEEE,MMM dd,yyyy'}}</p>
+<p>{{todayDate | date:'hh:mm:ss,a'}}</p>
+<p>{{todayDate | date:'a'}}</p>
+
+
+
+
+<p>{{6589.2312345678 | number:'4.0-2'}}</p>
+
+<p>{{00.54565 | percent}}</p>
+<p>{{months  | slice: 1:4 }}</p>
+
+<section>
+    <h1>Custom Pipe</h1>
+    <div>
+      <p>Fahrenheit to Celsius</p>
+      <p>Fahrenheit :</p>
+       <input type="text" [(ngModel)]= "ShowSet"/>
+      <p>{{  ShowSet | sqrt }} C</p>
+      <br>
+      <p>Celcius to Fahrenheit</p>
+      <p>Celcius : <input type="text" [(ngModel)]= "ShowSet" /></p>
+      <p>{{ ShowSet | sqrt  }} F</p>
+    </div>
+  </section>
+
+
+  <div> 
+    Ng-template Content 
+    <div *ngIf="condition else showNgTemplateContent"> 
+      <p> Shouldn't be displayed </p>
+    </div>
+ </div>
+  
+ <ng-template #showNgTemplateContent> <p>Should be displayed</p>
+ </ng-template>
+
+ <ng-container *ngIf= "condition">
+  <div *ngFor= "let i of SampleData; trackBy: trackByFn">
+    {{i.name}}
+  </div>
+ </ng-container>
+
+ 
+
+ <div  *ngIf= "role==='admin' then Admin else User" >
+
+ </div>
+
+ <ng-template #Admin>
+   Admin content
+ </ng-template>
+ <ng-template #User>
+  User content
+</ng-template>
+
+<ul>
+  <li 
+     *ngFor="let movie of Movies;
+      let first = first; 
+     let last = last" 
+     [ngClass]= "{ first: first, last: last }">
+       {{ movie.name }}
+  </li>
+</ul>
+
+<ul *ngFor="let i of industryType">
+  <li>{{ i.type }}</li>
+  <ul>
+    <li *ngFor="let j of i.movies">
+      {{ j.name }}
+    </li>
+  </ul>
+</ul>
+
+<table class="table">
+  <tr *ngFor= "let item of SampleData;">
+         <td [ngStyle]="{'color':color}" >{{item.name}}</td>
+ </tr>
+</table>
+
+<h1 [style.color]= " value?'red':'green'">Angular</h1>

@@ -1,0 +1,84 @@
+<!-- Default form register -->
+<h1 style="margin-left: 20%;margin-top: 2%;"> Sign up to continue</h1>
+
+<div class="card">
+  <form [formGroup]="signupForm">
+   
+    <div class="mb-3">
+      <label for="exampleInputFisrtName" class="form-label">First Name</label>
+      <input type="text" formControlName="firstName" class="form-control" id="exampleInputFisrtName" aria-describedby="emailHelp">
+      <!-- <div
+      *ngIf="!signupForm.controls.firstname?.valid && (signupForm.controls.firstname?.dirty
+      ||signupForm.controls.signupForm?.touched)">
+        First Name is not valid
+    </div>-->
+    </div>
+
+     <div class="mb-3">
+      <label for="exampleInputLastName" class="form-label">Last Name</label>
+      <input type="text" formControlName="lastName" class="form-control" id="exampleInputLastName" aria-describedby="emailHelp">
+     </div>
+
+     <div class="mb-3">
+      <label for="exampleInputStudentEmail" class="form-label">Email</label>
+      <input type="email"  formControlName="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp">
+      
+    </div> 
+   
+     <div class="mb-3">
+      <label for="exampleInputPhoneNumber" class="form-label">Mobile Number</label>
+      <input type="number" formControlName="mobile" class="form-control" id="exampleInputMobileNumber" aria-describedby="emailHelp">
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleInputPassWord" class="form-label">PassWord</label>
+      <input type="password" formControlName="PassWord" class="form-control" id="exampleInputPassWord" aria-describedby="emailHelp">
+    </div>
+  
+
+    <br>
+    <br>
+
+    <!-- Phone number 
+    <input type="text" id="defaultRegisterPhonePassword" class="form-control" placeholder="Phone number" aria-describedby="defaultRegisterFormPhoneHelpBlock">
+    <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
+      Optional - for two-step authentication
+    </small>
+
+    Newsletter -->
+    
+
+    <!-- Sign up button -->
+    <button class="btn" mat-raised-button color="warn" [disabled]="signupForm.invalid"(click)="signUp()">SignUp</button>&nbsp;
+    <button class="btn1" mat-raised-button color="primary"  routerLink="/app-login">LogIn</button>&nbsp;
+    <br>
+    <br>
+    <br>
+
+    <!-- Social register -->
+    <p>or sign up with:</p>
+    
+    <a type="button" class="light-blue-text mx-2">
+      <mat-icon><i class="fab fa-facebook"></i></mat-icon>
+    </a>
+    <a type="button" class="light-blue-text mx-2">
+      <mat-icon><i class="fab fa-google-plus-square"></i></mat-icon>
+    </a>
+    <a type="button" class="light-blue-text mx-2">
+      <mat-icon><i class="fab fa-twitter-square"></i></mat-icon>
+    </a>
+    <a type="button" class="light-blue-text mx-2">
+      <mat-icon><i class="fab fa-github"></i></mat-icon>
+    </a>
+
+    <hr>
+
+    <!-- Terms of service -->
+    <p>By clicking
+      <em>Sign up</em> you agree to our
+      <a href="" target="_blank">terms of service</a></p>
+
+  </form>
+</div>
+
+  <!-- Default form register -->

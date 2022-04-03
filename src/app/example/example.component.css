@@ -1,0 +1,29 @@
+.cog{
+    background-color: brown;
+}
+.item{
+    background-color: blue;
+}
+.first{
+    background-color: blue;
+    color: azure;
+}
+.last{
+    background-color: blue;
+}
+.one{
+    background-color: blue;
+    color: azure;
+}
+.two{
+    background-color: blue;
+}
+.error{
+    color:red;
+}
+input.ng-invalid.ng-touched{
+    border: 2px solid red;
+}
+input.ng-valid.ng-dirty{
+    border: 2px solid green;
+}

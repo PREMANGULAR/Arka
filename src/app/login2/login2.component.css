@@ -1,0 +1,22 @@
+
+.btn{
+    float:right;
+    margin-right: 2%;
+}
+.error{
+    color:red;
+}
+input.ng-invalid{
+    border-left: 5px solid red;
+}
+input.ng-valid{
+    border-left: 5px solid green;
+}
+.card{
+ width:40%;
+ height: 40%;
+ padding: 5%;
+ left:20%;
+ margin-top:5%;
+
+}

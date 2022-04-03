@@ -1,0 +1,122 @@
+<div class="Card1">
+    <nav class="navbar navbar-expand-lg navbar-light ">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#" [style.color]= "'white'"><strong>ASHOP</strong></a>
+    
+              <div class="collapse navbar-collapse "  >
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist" style="margin-top: 10px;">
+                  <li class="nav-item " >
+                    <a class="nav-link active " id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true"[style.color]="'white'">Men</a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link " id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false"[style.color]="'white'">Women</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false"[style.color]="'white'">Children</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false"[style.color]="'white'">Winter</a>
+                  </li>
+                </ul>
+                  <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"></div>
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"></div>
+                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"></div>
+                  </div>
+              </div>
+      <div *ngfor= "let i of subject" color= red>
+        <h1>{{i}}</h1> 
+      </div>
+       <div class="input-group" style="margin-right: -40%;">
+          <div class="form-outline">
+            <input type="search" id="form1"  placeholder="Search" class="form-control" />
+          </div>
+          <button type="button" class="btn btn-primary">
+            <i class="material-icons">search</i>
+          </button>
+        </div>
+          <button class="button button4"><i class="fas fa-user-circle"></i></button>
+          <button class="button button4"><i class="fas fa-heart">
+            {{wishlist}}
+          </i></button>
+          <button class="button button4"><i class="fas fa-shopping-cart">
+            {{item}}
+          </i></button>
+    </nav>
+    
+   <!--<div class="card4">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner" >
+        <div class="carousel-item active" >
+          <img src="https://i.pinimg.com/originals/c1/23/d5/c123d526121025c7625ac5fc4dea949b.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://theforbiz.com/wp-content/uploads/2019/04/5-Most-Famous-Men%E2%80%99s-Clothing-Brands-Theforbiz.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://www.baldingbeards.com/wp-content/uploads/2019/02/tommy-hilfiger-logo-final-1024x538.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+     <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-target="#carouselExampleControls" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </button>
+    </div>
+    </div>-->
+  
+
+
+<div>
+  <div class="contenar">
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkrKuh-HHDsMc4pGvxrUW-b_9LXImEzhsgMg&usqp=CAU" alt="Card image cap">
+    <div class="card-body">
+      Highlander Green & White Slim Fit Shirt
+      <p class="card-text"><strong>price: 2000 RS</strong></p>
+    <button class="button button4"(click)="abc()"><i class="fas fa-heart" [ngClass] = " position ? 'fa-cog': 'fav'"></i></button>
+    <button class="button button4" id="newId1" (click)="addtocart()"><i class="fas fa-shopping-cart">Add to cart</i></button>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <a><img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpoL5s65O-v614MOzISoqaVFCtIrMTdGNvnmwc0AWc-HK2VwvRIcNt_DQkQ4TzRpO0-IA&usqp=CAU" alt="Card image cap"> </a>
+    <div class="card-body">
+      Shirt
+      <p class="card-text"><strong>price: 3000 RS</strong></p>
+      <button class="button button4" (click)="abcd()"><i class="fas fa-heart" [ngClass] = " position1 ? 'fa-cog': 'fav'"></i></button>
+    <button class="button button4" id="newId2" (click)="addtocart()"><i class="fas fa-shopping-cart">Add to cart</i></button>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem;">
+    <a><img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSKsmFnzYRAAUFK4o6ON1LYO6Ms1vHhWVDNQ3_UB2OHL2VkXPpsQn-lkLI53bAHoV1vLk&usqp=CAU" alt="Card image cap"> </a>
+    <div class="card-body">
+      Casual Shirt
+      <p class="card-text"><strong>price: 3500 RS</strong></p>
+      <button class="button button4" (click)="abcde()"><i class="fas fa-heart" [ngClass] = " position2 ? 'fa-cog': 'fav'"></i></button>
+    <button class="button button4" id="newId3" (click)="addtocart()"><i class="fas fa-shopping-cart">Add to cart</i></button>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <a><img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb8z0j5AwNMm2qs8Pmu6CxWa5Xsqd7WLtVe97kJtmbdtRVsNLaoaOi3bHTZf8OFuTBbuE&usqp=CAU" alt="Card image cap"> </a>
+    <div class="card-body">
+      White Slim Fit Printed Casual Shirt
+      <p class="card-text"><strong>price: 500 RS</strong></p>
+   
+      <button class="button button4"(click)="abcdef()"><i class="fas fa-heart"  [ngClass] = " position3 ? 'fa-cog': 'fav'"></i></button>
+    <button class="button button4" id="newId4" (click)="addtocart()"><i class="fas fa-shopping-cart"  >Add to cart</i></button>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+
+
+
